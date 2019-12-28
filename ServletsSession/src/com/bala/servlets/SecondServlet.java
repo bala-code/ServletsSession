@@ -21,12 +21,13 @@ public class SecondServlet extends HttpServlet {
 		
 		
 		//#using session
-		/*
-		 * HttpSession session =request.getSession(); String str =
-		 * session.getAttribute("t1").toString(); System.out.println(str); PrintWriter
-		 * out = response.getWriter(); //out.println("In Second Servlet");
-		 * out.println("Welcome"+str);
-		 */	
+		
+		  HttpSession session =request.getSession(); 
+		  String str =session.getAttribute("tname").toString();
+		  System.out.println(str);
+		  PrintWriter out = response.getWriter(); //out.println("In Second Servlet");
+		  out.println("Welcome");
+		 	
 		
 		//#using cookies
 		/*
@@ -38,10 +39,10 @@ public class SecondServlet extends HttpServlet {
 		
 		//#using URL rewriting session
 		
-		String str = request.getParameter("t1");
+		//String str = request.getParameter("t1");
 		
-		PrintWriter out = response.getWriter();
-		out.print("Welcome"+str);
+		//PrintWriter out = response.getWriter();
+		//out.print("Welcome"+str);
 		
 	}
 
